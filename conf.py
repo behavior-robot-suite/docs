@@ -13,7 +13,7 @@ author = 'Yunfan Jiang'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ["sphinxcontrib.video",]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -25,3 +25,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
+
+# -- Custom CSS -------------------------------------------------
+def setup(app):
+    app.add_css_file('css/custom.css')
