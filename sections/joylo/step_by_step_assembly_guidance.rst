@@ -261,7 +261,7 @@ Ensure the forearm motor is adjusted to the provided shaft position.
    :width: 480px
 
 .. note::
-    Make sure the shaft position is at 90 degrees when the arm is at the following configuration.
+    Make sure the shaft position is at 180 degrees when the arm is at the following configuration.
 
     .. figure:: /images/joylo/assembly/forearm_3.png
         :width: 480px
@@ -360,3 +360,62 @@ Now you have an assembled right arm!
 
 .. figure:: /images/joylo/assembly/assembled_right_arm.jpeg
    :width: 480px
+
+Assemble the Left Arm
+---------------------------------------
+The left arm can be assembled in a similar way.
+Notice the shaft positions of the shoulder roll motors are mirrored.
+Please ensure the shaft positions are at 90 degrees when the arm is at the following configuration.
+
+.. figure:: /images/joylo/assembly/left_arm_1.jpeg
+    :width: 480px
+
+.. figure:: /images/joylo/assembly/left_arm_2.jpeg
+    :width: 480px
+
+.. figure:: /images/joylo/assembly/left_arm_3.png
+    :width: 480px
+
+.. figure:: /images/joylo/assembly/left_arm_4.png
+    :width: 480px
+
+Assemble the U2D2 Mount
+---------------------------------------
+Take the U2D2, power hub board, and the U2D2 mount ``u2d2_mount.obj``.
+
+.. figure:: /images/joylo/assembly/u2d2_1.jpeg
+   :width: 480px
+
+Put the four hex screws into the slots.
+
+.. figure:: /images/joylo/assembly/u2d2_2.jpeg
+   :width: 480px
+
+Insert the power hub board into the mount.
+
+.. figure:: /images/joylo/assembly/u2d2_3.jpeg
+   :width: 480px
+
+Finally tighten the screws to secure the U2D2 and power hub board.
+
+.. figure:: /images/joylo/assembly/u2d2_4.jpeg
+   :width: 480px
+
+Put Everything on the T-Slot Extrusion
+---------------------------------------
+Using screws and nuts to fix assembled components to the T-slot extrusion, as shown below.
+
+.. figure:: /images/joylo/assembly/together_1.jpeg
+   :width: 480px
+
+.. figure:: /images/joylo/assembly/together_2.jpeg
+   :width: 480px
+
+.. figure:: /images/joylo/assembly/together_3.jpeg
+   :width: 480px
+
+.. figure:: /images/joylo/assembly/together_4.jpeg
+    :width: 480px
+
+.. figure:: /images/joylo/assembly/together_5.jpeg
+    :width: 480px
