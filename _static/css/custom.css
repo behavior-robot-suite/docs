@@ -1,7 +1,3 @@
-button.theme-switch-button {
-    display: none !important;
-}
-
 .bimanual {
     color: #92C4E9;
 }
@@ -16,4 +12,9 @@ button.theme-switch-button {
 
 ul.rocketlist {
     list-style-type: "🚀";
+}
+
+ul.nobullet {
+    list-style-type: none;
+    padding-left: 0;
 }

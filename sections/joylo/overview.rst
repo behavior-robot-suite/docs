@@ -21,7 +21,7 @@ Functionalities Overview
 .. figure:: /images/joylo/hardware_overview.png
 
 
-Bill of Materials
+Bill of Materials (BoM)
 ---------------------------------------
 Here is a table of components used to build JoyLo.
 We list necessary components and accessories.

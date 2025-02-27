@@ -17,7 +17,7 @@ Key features include:
 
 .. figure:: /images/brs_tasks_overview.png
 
-Check out our paper!
+Paper and Citation
 ---------------------------------------
 Our paper is available on arXiv. If you find our work useful, please consider citing us!
 

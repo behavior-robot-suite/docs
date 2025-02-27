@@ -13,12 +13,14 @@ BEHAVIOR Robot Suite documentation
 
 .. toctree::
    :caption: Getting Started
-   :maxdepth: 1
+   :maxdepth: 2
 
    sections/getting_started/overview
 
 .. toctree::
    :caption: JoyLo
-   :maxdepth: 1
+   :maxdepth: 2
 
    sections/joylo/overview
+   sections/joylo/step_by_step_assembly_guidance
+   sections/joylo/assembly_video
