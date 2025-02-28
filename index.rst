@@ -24,3 +24,4 @@ BEHAVIOR Robot Suite documentation
    sections/joylo/overview
    sections/joylo/step_by_step_assembly_guidance
    sections/joylo/assembly_video
+   sections/joylo/setup_and_calibration

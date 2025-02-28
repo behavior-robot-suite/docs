@@ -13,7 +13,7 @@ author = 'Yunfan Jiang'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinxcontrib.video",]
+extensions = ["sphinxcontrib.video", "sphinx_copybutton"]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
