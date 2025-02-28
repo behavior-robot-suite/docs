@@ -1,6 +1,8 @@
 Installation
 =======================================
 
+.. _brs_ctrl_installation_create_environment:
+
 Create Environment
 ---------------------------------------
 
@@ -37,6 +39,8 @@ Reactivate the environment so that the changes take effect:
     conda activate brs
 
 To test the installation, run ``roscore`` and check if it works.
+
+.. _brs_ctrl_installation_install_brs_ctrl:
 
 Install ``brs_ctrl``
 ---------------------------------------

@@ -1,3 +1,5 @@
+.. _joylo_assembly_video:
+
 Assembly Videos
 =======================================
 

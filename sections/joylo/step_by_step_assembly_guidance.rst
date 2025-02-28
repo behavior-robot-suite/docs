@@ -6,6 +6,7 @@ Step-by-Step Assembly Guidance
 =======================================
 
 We provide step-by-step assembly guidance for JoyLo.
+Assembly videos can be found in :ref:`joylo_assembly_video`.
 
 Prepare All Components
 ---------------------------------------
