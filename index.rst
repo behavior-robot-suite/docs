@@ -13,15 +13,22 @@ BEHAVIOR Robot Suite documentation
 
 .. toctree::
    :caption: Getting Started
-   :maxdepth: 2
+   :maxdepth: 1
 
    sections/getting_started/overview
 
 .. toctree::
    :caption: JoyLo
-   :maxdepth: 2
+   :maxdepth: 1
 
    sections/joylo/overview
    sections/joylo/step_by_step_assembly_guidance
    sections/joylo/assembly_video
    sections/joylo/setup_and_calibration
+
+.. toctree::
+    :caption: BRS Control
+    :maxdepth: 1
+
+    sections/brs_ctrl/overview
+    sections/brs_ctrl/installation
