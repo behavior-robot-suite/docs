@@ -17,11 +17,36 @@ We also designed 3D-printable mounts for the cameras:
 * ZED Mini mount (`link <#>`_);
 * Intel RealSense T265 mount (`link <#>`_).
 
-First connect the USB hub to the robot's onboard computer. This step requires the robot's body shells to be disassembled.
+First connect the USB hub to the robot's onboard computer. This step requires the robot's body shells to be removed.
+
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_1.jpeg
+    :width: 480px
+
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_2.jpg
+    :width: 480px
+
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_3.jpg
+    :width: 480px
+
 Then attach the USB hub to the robot's back.
 The USB hub is later used for camera connections and the push buttons are convenient for connecting/disconnecting the cameras.
 
-Install cameras to the robot using provided mounts.
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_4.jpeg
+    :width: 480px
+
+Install cameras on the robot using provided mounts.
+
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_5.jpeg
+    :width: 480px
+
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_6.jpeg
+    :width: 480px
+
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_7.jpeg
+    :width: 480px
+
+.. figure:: /images/brs_ctrl/robot_setup/robot_setup_8.jpeg
+    :width: 480px
 
 Robot Connection
 ---------------------------------------
