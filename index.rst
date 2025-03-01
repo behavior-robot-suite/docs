@@ -36,4 +36,5 @@ BEHAVIOR Robot Suite documentation
     sections/brs_ctrl/ros_connection
     sections/brs_ctrl/launch_controller
     sections/brs_ctrl/launch_cameras
+    sections/brs_ctrl/run_real_robots
 

@@ -1,3 +1,5 @@
+.. _brs_ctrl_launch_controller:
+
 Launch the Controller
 =======================================
 
