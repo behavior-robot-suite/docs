@@ -33,4 +33,5 @@ BEHAVIOR Robot Suite documentation
     sections/brs_ctrl/overview
     sections/brs_ctrl/installation
     sections/brs_ctrl/robot_setup
+    sections/brs_ctrl/ros_connection
 

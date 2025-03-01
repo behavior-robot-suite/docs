@@ -116,3 +116,6 @@ Finally, install other dependencies:
     pip3 install hid
     sudo apt-get update
     sudo apt-get install libhidapi-hidraw0
+
+.. note::
+    If the bluetooth connection on your Ubuntu workstation is not working, simply buy a bluetooth dongle, such as `this one <https://www.amazon.com/ASUS-USB-BT500-Bluetooth-Backward-Compatible/dp/B08DFBNG7F>`_, and plug it in.
