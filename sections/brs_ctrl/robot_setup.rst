@@ -1,3 +1,5 @@
+.. _brs_ctrl_robot_setup:
+
 Robot Setup
 =======================================
 

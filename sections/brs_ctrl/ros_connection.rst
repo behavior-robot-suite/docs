@@ -1,3 +1,5 @@
+.. _brs_ctrl_ros_connection:
+
 ROS Connection
 =======================================
 
