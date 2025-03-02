@@ -1,3 +1,5 @@
+.. _brs_ctrl_run_real_robots:
+
 Run Real Robots
 =======================================
 
@@ -106,3 +108,11 @@ To query the RGBD camera observation, pass ``enable_rgbd=True`` to the ``R1Inter
         "left_wrist": np array, (H, W),
         "right_wrist": np array, (H, W),
     }
+
+Here is an example script to get robot state (set the proper ``ROS_IP`` and ``ROS_MASTER_URI`` if necessary):
+
+.. code-block:: bash
+
+    export ROS_IP=10.0.0.10  # this makes sure ROS topics can be addressed properly
+    export ROS_MASTER_URI=http://10.0.0.10:11311
+    python3 scripts/examples/get_r1_state.py

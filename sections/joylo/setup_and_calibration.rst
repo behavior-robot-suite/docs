@@ -1,3 +1,5 @@
+.. _joylo_setup_and_calibration:
+
 Setup and Calibration
 =======================================
 

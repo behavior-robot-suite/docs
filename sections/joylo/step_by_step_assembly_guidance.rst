@@ -2,6 +2,8 @@
 
     <input type="checkbox">
 
+.. _joylo_assembly_guidance:
+
 Step-by-Step Assembly Guidance
 =======================================
 
