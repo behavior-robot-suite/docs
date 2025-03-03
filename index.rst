@@ -48,4 +48,5 @@ BEHAVIOR Robot Suite documentation
     sections/wbvima/overview
     sections/wbvima/installation
     sections/wbvima/data
+    sections/wbvima/train
     sections/wbvima/deploy
