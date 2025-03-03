@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Policy Training &#8212; BEHAVIOR Robot Suite  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=8c1380d4" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sections/wbvima/train';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Deploy Trained Policies" href="deploy.html" />
+    <link rel="prev" title="Data Preparation" href="data.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">BEHAVIOR Robot Suite  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JoyLo</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../joylo/overview.html">JoyLo Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/step_by_step_assembly_guidance.html">Step-by-Step Assembly Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/assembly_video.html">Assembly Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/setup_and_calibration.html">Setup and Calibration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BRS Control</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/overview.html"><code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/robot_setup.html">Robot Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/ros_connection.html">ROS Connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/launch_controller.html">Launch the Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/launch_cameras.html">Launch Cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/run_real_robots.html">Run Real Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/run_joylo.html">Run JoyLo Teleoperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/data_collection.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/deploy_policies.html">Deploy Policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">WB-VIMA</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">WB-VIMA Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Preparation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Policy Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy Trained Policies</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/sections/wbvima/train.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Policy Training</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="policy-training">
+<h1>Policy Training<a class="headerlink" href="#policy-training" title="Permalink to this heading">#</a></h1>
+<p>Run the following command to train WB-VIMA policies.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>main/train/train.py<span class="w"> </span><span class="nv">data_dir</span><span class="o">=</span>&lt;HDF5_PATH&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">bs</span><span class="o">=</span>&lt;BS&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">arch</span><span class="o">=</span>wbvima<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">task</span><span class="o">=</span>&lt;TASK_NAME&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">exp_root_dir</span><span class="o">=</span>&lt;EXP_ROOT_DIR&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">gpus</span><span class="o">=</span>&lt;NUM_GPUS&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">use_wandb</span><span class="o">=</span>&lt;USE_WANDB&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="nv">wandb_project</span><span class="o">=</span>&lt;WANDB_PROJECT&gt;
+</pre></div>
+</div>
+<p>We explain the arguments below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data_dir</span></code>: The path to the merged hdf5 file containing the training data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bs</span></code>: Batch size.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">arch</span></code>: The architecture to use. It must exist in the <code class="docutils literal notranslate"><span class="pre">arch</span></code> <a class="github reference external" href="https://github.com/behavior-robot-suite/brs-algo/tree/main/main/train/cfg/arch">behavior-robot-suite/brs-algo</a> folder. Now we use <code class="docutils literal notranslate"><span class="pre">wbvima</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task</span></code>: The task name. It must exist in the <code class="docutils literal notranslate"><span class="pre">task</span></code> <a class="github reference external" href="https://github.com/behavior-robot-suite/brs-algo/tree/main/main/train/cfg/task">behavior-robot-suite/brs-algo</a> folder. Select one from <code class="docutils literal notranslate"><span class="pre">clean_house_after_a_wild_party</span></code>, <code class="docutils literal notranslate"><span class="pre">clean_the_toilet</span></code>, <code class="docutils literal notranslate"><span class="pre">take_trash_outside</span></code>, <code class="docutils literal notranslate"><span class="pre">put_items_onto_shelves</span></code>, and <code class="docutils literal notranslate"><span class="pre">lay_clothes_out</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exp_root_dir</span></code>: The directory to save the experiment results, including curves and model checkpoints.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpus</span></code>: The number of GPUs to use. Refer to the <a class="reference external" href="https://lightning.ai/docs/pytorch/stable/common/trainer.html#devices">PyTorch Lightning documents</a> for how to set it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use_wandb</span></code>: Whether to use Wandb for logging. Set it to <code class="docutils literal notranslate"><span class="pre">True</span></code> if you want to use it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wandb_project</span></code>: The Wandb project name. If Wandb is not used, set it to <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+</ul>
+<p>For more parameters, refer to the training config file <a class="github reference external" href="https://github.com/behavior-robot-suite/brs-algo/blob/main/main/train/cfg/cfg.yaml">behavior-robot-suite/brs-algo</a>.
+We follow the <a class="reference external" href="https://hydra.cc/docs/intro/">Hydra CLI syntax</a>.</p>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Preparation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="deploy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Deploy Trained Policies</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yunfan Jiang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Yunfan Jiang.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

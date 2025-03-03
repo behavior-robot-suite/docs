@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Run JoyLo Teleoperation &#8212; BEHAVIOR Robot Suite  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=8c1380d4" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sections/brs_ctrl/run_joylo';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data Collection" href="data_collection.html" />
+    <link rel="prev" title="Run Real Robots" href="run_real_robots.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">BEHAVIOR Robot Suite  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JoyLo</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../joylo/overview.html">JoyLo Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/step_by_step_assembly_guidance.html">Step-by-Step Assembly Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/assembly_video.html">Assembly Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/setup_and_calibration.html">Setup and Calibration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BRS Control</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html"><code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_setup.html">Robot Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_connection.html">ROS Connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_controller.html">Launch the Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_cameras.html">Launch Cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_real_robots.html">Run Real Robots</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Run JoyLo Teleoperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_collection.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_policies.html">Deploy Policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">WB-VIMA</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/overview.html">WB-VIMA Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/data.html">Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/train.html">Policy Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/deploy.html">Deploy Trained Policies</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/sections/brs_ctrl/run_joylo.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Run JoyLo Teleoperation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-teleoperation">Simulation Teleoperation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-robot-teleoperation">Real Robot Teleoperation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bilateral-teleoperation">Bilateral Teleoperation</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="run-joylo-teleoperation">
+<span id="brs-ctrl-run-joylo"></span><h1>Run JoyLo Teleoperation<a class="headerlink" href="#run-joylo-teleoperation" title="Permalink to this heading">#</a></h1>
+<p>Before running JoyLo, ensure that the JoyLo is assembled following <a class="reference internal" href="../joylo/step_by_step_assembly_guidance.html#joylo-assembly-guidance"><span class="std std-ref">Step-by-Step Assembly Guidance</span></a> and calibrated following <a class="reference internal" href="../joylo/setup_and_calibration.html#joylo-setup-and-calibration"><span class="std std-ref">Setup and Calibration</span></a>.
+Also ensure that the robot can be controlled following <a class="reference internal" href="run_real_robots.html#brs-ctrl-run-real-robots"><span class="std std-ref">Run Real Robots</span></a>.</p>
+<section id="simulation-teleoperation">
+<h2>Simulation Teleoperation<a class="headerlink" href="#simulation-teleoperation" title="Permalink to this heading">#</a></h2>
+<p>We first run JoyLo teleoperation in simulation to get familiar with the controls.
+Start from the <code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> root directory, and run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>scripts/joylo/sim_joylo.py
+</pre></div>
+</div>
+<p>Now let’s go through what the script does. First we import the necessary libraries and modules:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="linenos">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="linenos">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pybullet</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pb</span>
+<span class="linenos">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span> <span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.asset_root</span><span class="w"> </span><span class="kn">import</span> <span class="n">ASSET_ROOT</span>
+<span class="linenos">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.joylo</span><span class="w"> </span><span class="kn">import</span> <span class="n">JoyLoController</span>
+<span class="linenos">8</span> <span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.joylo.joylo_arms</span><span class="w"> </span><span class="kn">import</span> <span class="n">JoyLoArmPositionController</span>
+<span class="linenos">9</span> <span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.joylo.joycon</span><span class="w"> </span><span class="kn">import</span> <span class="n">R1JoyConInterface</span>
+</pre></div>
+</div>
+<p>We then define the joint positions corresponding to the neutral pose of the robot with arms relaxed and hanging by the sides.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">12</span> <span class="n">neutral_left_arm_qs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.56</span><span class="p">,</span> <span class="mf">2.94</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.54</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="linenos">13</span> <span class="n">neutral_right_arm_qs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">1.56</span><span class="p">,</span> <span class="mf">2.94</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.54</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The reason we do this is JoyLo internally maps <strong>delta</strong> joint positions to the robot.
+In this way, we bypass the need to calibrate the absolute joint positions.
+All we need to do is to make sure JoyLo arms start from roughly the same position as the robot arms, as shown in the figure below.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joylo_neutral_pose.png"><img alt="../../_images/joylo_neutral_pose.png" src="../../_images/joylo_neutral_pose.png" style="width: 200px;" /></a>
+</figure>
+<p>Now we instantiate the JoyLo arms interface.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">17</span> <span class="n">joylo_arms</span> <span class="o">=</span> <span class="n">JoyLoArmPositionController</span><span class="p">(</span>
+<span class="hll"><span class="linenos">18</span>     <span class="n">left_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">19</span>     <span class="n">right_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">20</span>     <span class="n">motors_port</span><span class="o">=</span><span class="s2">&quot;/dev/tty_joylo&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>     <span class="n">left_arm_joint_signs</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">22</span>     <span class="n">right_arm_joint_signs</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">23</span>     <span class="n">left_slave_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">24</span>     <span class="n">left_master_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">25</span>     <span class="n">right_slave_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">26</span>     <span class="n">right_master_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+</span><span class="linenos">27</span>     <span class="n">left_arm_joint_reset_positions</span><span class="o">=</span><span class="n">neutral_left_arm_qs</span><span class="p">,</span>
+<span class="linenos">28</span>     <span class="n">right_arm_joint_reset_positions</span><span class="o">=</span><span class="n">neutral_right_arm_qs</span><span class="p">,</span>
+<span class="linenos">29</span>     <span class="n">multithread_read_joints</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">30</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we explain a few important parameters.</p>
+<p><code class="docutils literal notranslate"><span class="pre">left_motor_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">right_motor_ids</span></code> are the unique Dynamixel motor IDs of the left and right arms, respectively.
+They can be assigned using the Dynamixel Wizard.
+<code class="docutils literal notranslate"><span class="pre">motors_port</span></code> is the serial port of the U2D2 connected to the robot. We set it to a fixed alias as described in <a class="reference internal" href="../joylo/setup_and_calibration.html#joylo-setup-and-calibration"><span class="std std-ref">Setup and Calibration</span></a>.
+<code class="docutils literal notranslate"><span class="pre">left_arm_joint_signs</span></code> and <code class="docutils literal notranslate"><span class="pre">right_arm_joint_signs</span></code> are the signs of the joint angles. You may need to flip the signs if the joints move in the opposite direction.</p>
+<p><code class="docutils literal notranslate"><span class="pre">master_motor_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">slave_motor_ids</span></code> are for joints where two Dynamixel motors are used to drive a single joint.
+In our case, they are the shoulder roll and upper-arm joints.
+Joint positions will be read from master motors. While both master and slave motors will be driven to the same position.
+For convenience, we set motors with smaller IDs as master motors.</p>
+<p>Now we instantiate the JoyCon interface and finally create the JoyLo interface.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">31</span> <span class="n">joycon</span> <span class="o">=</span> <span class="n">R1JoyConInterface</span><span class="p">()</span>
+<span class="linenos">32</span> <span class="n">joylo</span> <span class="o">=</span> <span class="n">JoyLoPositionController</span><span class="p">(</span><span class="n">joycon</span><span class="o">=</span><span class="n">joycon</span><span class="p">,</span> <span class="n">joylo_arms</span><span class="o">=</span><span class="n">joylo_arms</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Next, we create a PyBullet simulation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">34</span> <span class="n">pb_client</span> <span class="o">=</span> <span class="n">pb</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">pb</span><span class="o">.</span><span class="n">GUI</span><span class="p">)</span>
+<span class="linenos">35</span> <span class="n">pb</span><span class="o">.</span><span class="n">setGravity</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.8</span><span class="p">)</span>
+<span class="linenos">36</span> <span class="c1"># load robot</span>
+<span class="linenos">37</span> <span class="n">robot</span> <span class="o">=</span> <span class="n">pb</span><span class="o">.</span><span class="n">loadURDF</span><span class="p">(</span>
+<span class="linenos">38</span>     <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ASSET_ROOT</span><span class="p">,</span> <span class="s2">&quot;robot/r1_pro/r1_pro.urdf&quot;</span><span class="p">),</span>
+<span class="linenos">39</span>     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="linenos">40</span>     <span class="n">useFixedBase</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">41</span> <span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span> <span class="c1"># reset all joints to 0</span>
+<span class="linenos">44</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pb</span><span class="o">.</span><span class="n">getNumJoints</span><span class="p">(</span><span class="n">robot</span><span class="p">)):</span>
+<span class="linenos">45</span>     <span class="n">pb</span><span class="o">.</span><span class="n">resetJointState</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span> <span class="n">torso_joint_idxs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="linenos">48</span> <span class="n">left_arm_joint_idxs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="linenos">49</span> <span class="n">right_arm_joint_idxs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="linenos">50</span>
+<span class="linenos">51</span> <span class="n">curr_torso_qs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The teleoperation runs in a loop. Note that we only control arms and the torso in simulation for demonstration purposes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">53</span> <span class="k">while</span> <span class="n">pb</span><span class="o">.</span><span class="n">isConnected</span><span class="p">():</span>
+<span class="linenos">54</span>     <span class="n">joylo_actions</span> <span class="o">=</span> <span class="n">joylo</span><span class="o">.</span><span class="n">act</span><span class="p">(</span><span class="n">curr_torso_qs</span><span class="p">)</span>
+<span class="linenos">55</span>
+<span class="linenos">56</span>     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">torso_joint_idxs</span><span class="p">,</span> <span class="n">joylo_actions</span><span class="p">[</span><span class="s2">&quot;torso_cmd&quot;</span><span class="p">]):</span>
+<span class="linenos">57</span>         <span class="n">pb</span><span class="o">.</span><span class="n">resetJointState</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+<span class="linenos">58</span>     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">joylo_actions</span><span class="p">[</span><span class="s2">&quot;arm_cmd&quot;</span><span class="p">][</span><span class="s2">&quot;left&quot;</span><span class="p">]):</span>
+<span class="linenos">59</span>         <span class="n">pb</span><span class="o">.</span><span class="n">resetJointState</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">left_arm_joint_idxs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">q</span><span class="p">)</span>
+<span class="linenos">60</span>     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">joylo_actions</span><span class="p">[</span><span class="s2">&quot;arm_cmd&quot;</span><span class="p">][</span><span class="s2">&quot;right&quot;</span><span class="p">]):</span>
+<span class="linenos">61</span>         <span class="n">pb</span><span class="o">.</span><span class="n">resetJointState</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">right_arm_joint_idxs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">q</span><span class="p">)</span>
+<span class="linenos">62</span>
+<span class="linenos">63</span>     <span class="n">pb</span><span class="o">.</span><span class="n">stepSimulation</span><span class="p">()</span>
+<span class="linenos">64</span>
+<span class="linenos">65</span>     <span class="n">curr_torso_qs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">66</span>     <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">torso_joint_idxs</span><span class="p">:</span>
+<span class="linenos">67</span>         <span class="n">curr_torso_qs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pb</span><span class="o">.</span><span class="n">getJointState</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">idx</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">68</span>     <span class="n">curr_torso_qs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">curr_torso_qs</span><span class="p">)</span>
+<span class="linenos">69</span>     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="real-robot-teleoperation">
+<h2>Real Robot Teleoperation<a class="headerlink" href="#real-robot-teleoperation" title="Permalink to this heading">#</a></h2>
+<p>Now we run JoyLo teleoperation on the real robot.
+Open a new terminal and run the following command (set the proper <code class="docutils literal notranslate"><span class="pre">ROS_IP</span></code> and <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code> if necessary):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_IP</span><span class="o">=</span><span class="m">10</span>.0.0.10<span class="w">  </span><span class="c1"># this makes sure ROS topics can be addressed properly</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://10.0.0.10:11311
+python3<span class="w"> </span>scripts/joylo/real_joylo.py
+</pre></div>
+</div>
+<p>The real-robot teleoperation script is similar to the simulation one. We explain several key points here.
+First we create the robot interface as introduced in <a class="reference internal" href="run_real_robots.html#brs-ctrl-run-real-robots"><span class="std std-ref">Run Real Robots</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">18</span> <span class="n">robot</span> <span class="o">=</span> <span class="n">R1Interface</span><span class="p">(</span>
+<span class="linenos">19</span>     <span class="n">left_gripper</span><span class="o">=</span><span class="n">GalaxeaR1Gripper</span><span class="p">(</span><span class="n">left_or_right</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">gripper_close_stroke</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="linenos">20</span>     <span class="n">right_gripper</span><span class="o">=</span><span class="n">GalaxeaR1Gripper</span><span class="p">(</span><span class="n">left_or_right</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">gripper_close_stroke</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="linenos">21</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Next, we create the JoyCon interface:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">22</span> <span class="n">joycon</span> <span class="o">=</span> <span class="n">R1JoyConInterface</span><span class="p">(</span>
+<span class="linenos">23</span>     <span class="n">ros_publish_functional_buttons</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">24</span>     <span class="n">init_ros_node</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="linenos">25</span>     <span class="n">gripper_toggle_mode</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">26</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Here, setting <code class="docutils literal notranslate"><span class="pre">ros_publish_functional_buttons</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> enables us using the functional buttons on the JoyCon to facilitate the data collection (e.g., start the data collection, discard the data, and save the data).
+We set <code class="docutils literal notranslate"><span class="pre">init_ros_node</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code> to avoid creating a new ROS node, since we already have created one in the robot interface.
+Setting <code class="docutils literal notranslate"><span class="pre">gripper_toggle_mode</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> allows us to control the grippers opening and closing by just pressing the triggers once.
+If set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, we keep pressing the triggers to close the grippers.</p>
+<p>Next, we keep running the control in a loop.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">46</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="linenos">47</span> <span class="n">left_joylo_q</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">48</span> <span class="n">right_joylo_q</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">49</span>
+<span class="linenos">50</span> <span class="n">pbar</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">()</span>
+<span class="linenos">51</span> <span class="k">try</span><span class="p">:</span>
+<span class="linenos">52</span>     <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+<span class="linenos">53</span>         <span class="n">joylo_arms_q</span> <span class="o">=</span> <span class="n">joylo</span><span class="o">.</span><span class="n">q</span>
+<span class="linenos">54</span>         <span class="n">left_joylo_q</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">55</span>             <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span>
+<span class="linenos">56</span>             <span class="k">if</span> <span class="n">left_joylo_q</span> <span class="ow">is</span> <span class="kc">None</span>
+<span class="linenos">57</span>             <span class="k">else</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">left_joylo_q</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span>
+<span class="linenos">58</span>         <span class="p">)</span>
+<span class="linenos">59</span>         <span class="n">right_joylo_q</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">60</span>             <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span>
+<span class="linenos">61</span>             <span class="k">if</span> <span class="n">right_joylo_q</span> <span class="ow">is</span> <span class="kc">None</span>
+<span class="linenos">62</span>             <span class="k">else</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">right_joylo_q</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span>
+<span class="linenos">63</span>         <span class="p">)</span>
+<span class="linenos">64</span>         <span class="n">curr_torso_qs</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">last_joint_position</span><span class="p">[</span><span class="s2">&quot;torso&quot;</span><span class="p">]</span>
+<span class="linenos">65</span>         <span class="n">joycon_action</span> <span class="o">=</span> <span class="n">joycon</span><span class="o">.</span><span class="n">act</span><span class="p">(</span><span class="n">curr_torso_qs</span><span class="p">)</span>
+<span class="linenos">66</span>         <span class="n">robot_torso_cmd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,))</span>
+<span class="linenos">67</span>         <span class="n">robot_torso_cmd</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;torso_cmd&quot;</span><span class="p">][:]</span>
+<span class="linenos">68</span>
+<span class="linenos">69</span>         <span class="n">robot</span><span class="o">.</span><span class="n">control</span><span class="p">(</span>
+<span class="linenos">70</span>             <span class="n">arm_cmd</span><span class="o">=</span><span class="p">{</span>
+<span class="linenos">71</span>                 <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">left_joylo_q</span><span class="p">,</span>
+<span class="linenos">72</span>                 <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">right_joylo_q</span><span class="p">,</span>
+<span class="linenos">73</span>             <span class="p">},</span>
+<span class="linenos">74</span>             <span class="n">gripper_cmd</span><span class="o">=</span><span class="p">{</span>
+<span class="linenos">75</span>                 <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;gripper_cmd&quot;</span><span class="p">][</span><span class="s2">&quot;left&quot;</span><span class="p">],</span>
+<span class="linenos">76</span>                 <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;gripper_cmd&quot;</span><span class="p">][</span><span class="s2">&quot;right&quot;</span><span class="p">],</span>
+<span class="linenos">77</span>             <span class="p">},</span>
+<span class="linenos">78</span>             <span class="n">torso_cmd</span><span class="o">=</span><span class="n">robot_torso_cmd</span><span class="p">,</span>
+<span class="linenos">79</span>             <span class="n">base_cmd</span><span class="o">=</span><span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;mobile_base_cmd&quot;</span><span class="p">],</span>
+<span class="linenos">80</span>         <span class="p">)</span>
+<span class="linenos">81</span>         <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Notice that the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> sets an exponential moving average to smooth the trajectory.
+On the real robot, we can control the arms, grippers, torso, and mobile base, all at the same time.</p>
+<section id="bilateral-teleoperation">
+<h3>Bilateral Teleoperation<a class="headerlink" href="#bilateral-teleoperation" title="Permalink to this heading">#</a></h3>
+<p>JoyLo also supports bilateral teleoperation.
+At a high level, the JoyLo arms serve as the leader, issuing commands to the robot arms while simultaneously being regularized by the robot’s current joint positions.
+In this way, JoyLo provides haptic feedback without requiring additional force sensors. This feedback discourages abrupt user motions and offers proportional resistance when the robot experiences contact.</p>
+<p>To run bilateral teleoperation, first check the JoyLo arms can move to specified positions.
+Run the following script to command JoyLo arms to a goal position. They will stay at the position despite external forces.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>scripts/joylo/joylo_move.py
+</pre></div>
+</div>
+<p>Once you are confident that the JoyLo arms can move to the desired positions, run the bilateral teleoperation script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>scripts/joylo/real_joylo_bilateral.py
+</pre></div>
+</div>
+<p>Now you can control the robot with JoyLo. In the meantime, you can feel the resistance from JoyLo arms. This is because the JoyLo arms are also regularized by the robot arms’ current joint positions.</p>
+<p>Let’s explain the bilateral teleoperation script. First we import the necessary libraries and modules as before. But this time we import <code class="docutils literal notranslate"><span class="pre">JoyLoArmImpedanceController</span></code> instead of <code class="docutils literal notranslate"><span class="pre">JoyLoArmPositionController</span></code> to achieve impedance control of JoyLo arms.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="linenos"> 2</span><span class="kn">import</span><span class="w"> </span><span class="nn">rospy</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="linenos"> 4</span><span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.joylo</span><span class="w"> </span><span class="kn">import</span> <span class="n">JoyLoController</span>
+<span class="hll"><span class="linenos"> 7</span><span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.joylo.joylo_arms</span><span class="w"> </span><span class="kn">import</span> <span class="n">JoyLoArmImpedanceController</span>
+</span><span class="linenos"> 8</span><span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.joylo.joycon</span><span class="w"> </span><span class="kn">import</span> <span class="n">R1JoyConInterface</span>
+<span class="linenos"> 9</span><span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.robot_interface</span><span class="w"> </span><span class="kn">import</span> <span class="n">R1Interface</span>
+<span class="linenos">10</span><span class="kn">from</span><span class="w"> </span><span class="nn">brs_ctrl.robot_interface.grippers</span><span class="w"> </span><span class="kn">import</span> <span class="n">GalaxeaR1Gripper</span>
+</pre></div>
+</div>
+<p>We create the robot interface and JoyCon interface as before. When we create the <code class="docutils literal notranslate"><span class="pre">JoyLoArmImpedanceController</span></code>, we need to specify the proportional gains <code class="docutils literal notranslate"><span class="pre">Kp</span></code> and derivative gains <code class="docutils literal notranslate"><span class="pre">Kd</span></code> for the impedance control.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">28</span> <span class="n">joylo_arms</span> <span class="o">=</span> <span class="n">JoyLoArmImpedanceController</span><span class="p">(</span>
+<span class="linenos">29</span>     <span class="n">left_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="linenos">30</span>     <span class="n">right_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+<span class="linenos">31</span>     <span class="n">motors_port</span><span class="o">=</span><span class="s2">&quot;/dev/tty_joylo&quot;</span><span class="p">,</span>
+<span class="linenos">32</span>     <span class="n">left_arm_joint_signs</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="linenos">33</span>     <span class="n">right_arm_joint_signs</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="linenos">34</span>     <span class="n">left_slave_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="linenos">35</span>     <span class="n">left_master_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="linenos">36</span>     <span class="n">right_slave_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+<span class="linenos">37</span>     <span class="n">right_master_motor_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="hll"><span class="linenos">38</span>     <span class="n">left_arm_Kp</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">39</span>     <span class="n">left_arm_Kd</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">40</span>     <span class="n">right_arm_Kp</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">41</span>     <span class="n">right_arm_Kd</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">],</span>
+</span><span class="linenos">42</span>     <span class="n">left_arm_joint_reset_positions</span><span class="o">=</span><span class="n">neutral_left_arm_qs</span><span class="p">,</span>
+<span class="linenos">43</span>     <span class="n">right_arm_joint_reset_positions</span><span class="o">=</span><span class="n">neutral_right_arm_qs</span><span class="p">,</span>
+<span class="linenos">44</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">Kp</span></code> and <code class="docutils literal notranslate"><span class="pre">Kd</span></code> need to be tuned case by case. We set them to <code class="docutils literal notranslate"><span class="pre">0.5</span></code> and <code class="docutils literal notranslate"><span class="pre">0.01</span></code> respectively as a starting point.</p>
+<p>Next, we start the bilateral teleoperation loop. The key difference is we not only send control commands to the robot but also set goals for JoyLo arms.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">56</span> <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+<span class="linenos">57</span>     <span class="n">joylo_arms_q</span> <span class="o">=</span> <span class="n">joylo</span><span class="o">.</span><span class="n">q</span>
+<span class="linenos">58</span>     <span class="n">left_robot_arm_q</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">last_joint_position</span><span class="p">[</span><span class="s2">&quot;left_arm&quot;</span><span class="p">]</span>
+<span class="linenos">59</span>     <span class="n">right_robot_arm_q</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">last_joint_position</span><span class="p">[</span><span class="s2">&quot;right_arm&quot;</span><span class="p">]</span>
+<span class="linenos">60</span>     <span class="n">left_joylo_q</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">61</span>         <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span>
+<span class="linenos">62</span>         <span class="k">if</span> <span class="n">left_joylo_q</span> <span class="ow">is</span> <span class="kc">None</span>
+<span class="linenos">63</span>         <span class="k">else</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">left_joylo_q</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span>
+<span class="linenos">64</span>     <span class="p">)</span>
+<span class="linenos">65</span>     <span class="n">right_joylo_q</span> <span class="o">=</span> <span class="p">(</span>
+<span class="linenos">66</span>         <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span>
+<span class="linenos">67</span>         <span class="k">if</span> <span class="n">right_joylo_q</span> <span class="ow">is</span> <span class="kc">None</span>
+<span class="linenos">68</span>         <span class="k">else</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">right_joylo_q</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">joylo_arms_q</span><span class="p">[</span><span class="s2">&quot;right&quot;</span><span class="p">]</span>
+<span class="linenos">69</span>     <span class="p">)</span>
+<span class="linenos">70</span>     <span class="n">curr_torso_qs</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">last_joint_position</span><span class="p">[</span><span class="s2">&quot;torso&quot;</span><span class="p">]</span>
+<span class="linenos">71</span>     <span class="n">joycon_action</span> <span class="o">=</span> <span class="n">joycon</span><span class="o">.</span><span class="n">act</span><span class="p">(</span><span class="n">curr_torso_qs</span><span class="p">)</span>
+<span class="linenos">72</span>     <span class="n">robot_torso_cmd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,))</span>
+<span class="linenos">73</span>     <span class="n">robot_torso_cmd</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;torso_cmd&quot;</span><span class="p">][:]</span>
+<span class="linenos">74</span>
+<span class="hll"><span class="linenos">75</span>     <span class="n">joylo</span><span class="o">.</span><span class="n">set_new_arm_goal</span><span class="p">(</span>
+</span><span class="hll"><span class="linenos">76</span>         <span class="p">{</span>
+</span><span class="hll"><span class="linenos">77</span>             <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">left_robot_arm_q</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">78</span>             <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">right_robot_arm_q</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">79</span>         <span class="p">}</span>
+</span><span class="hll"><span class="linenos">80</span>     <span class="p">)</span>
+</span><span class="linenos">81</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">control_started</span><span class="p">:</span>
+<span class="linenos">82</span>         <span class="n">joylo</span><span class="o">.</span><span class="n">start_arm_control</span><span class="p">()</span>
+<span class="linenos">83</span>         <span class="n">control_started</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="hll"><span class="linenos">84</span>     <span class="n">robot</span><span class="o">.</span><span class="n">control</span><span class="p">(</span>
+</span><span class="hll"><span class="linenos">85</span>         <span class="n">arm_cmd</span><span class="o">=</span><span class="p">{</span>
+</span><span class="hll"><span class="linenos">86</span>             <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">left_joylo_q</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">87</span>             <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">right_joylo_q</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">88</span>         <span class="p">},</span>
+</span><span class="hll"><span class="linenos">89</span>         <span class="n">gripper_cmd</span><span class="o">=</span><span class="p">{</span>
+</span><span class="hll"><span class="linenos">90</span>             <span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;gripper_cmd&quot;</span><span class="p">][</span><span class="s2">&quot;left&quot;</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">91</span>             <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;gripper_cmd&quot;</span><span class="p">][</span><span class="s2">&quot;right&quot;</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">92</span>         <span class="p">},</span>
+</span><span class="hll"><span class="linenos">93</span>         <span class="n">torso_cmd</span><span class="o">=</span><span class="n">robot_torso_cmd</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">94</span>         <span class="n">base_cmd</span><span class="o">=</span><span class="n">joycon_action</span><span class="p">[</span><span class="s2">&quot;mobile_base_cmd&quot;</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos">95</span>     <span class="p">)</span>
+</span><span class="linenos">96</span>     <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, as a fun bonus, we can run the following script to see the robot unilaterally controls the JoyLo arms.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>scripts/joylo/r1_to_joylo.py
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="run_real_robots.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Run Real Robots</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="data_collection.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Collection</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-teleoperation">Simulation Teleoperation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-robot-teleoperation">Real Robot Teleoperation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bilateral-teleoperation">Bilateral Teleoperation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yunfan Jiang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Yunfan Jiang.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

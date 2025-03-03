@@ -1,0 +1,20 @@
+.bimanual {
+    color: #92C4E9;
+}
+
+.navigation {
+    color: #F0C987;
+}
+
+.reachability {
+    color: #EA9A9D;
+}
+
+ul.rocketlist {
+    list-style-type: "🚀";
+}
+
+ul.nobullet {
+    list-style-type: none;
+    padding-left: 0;
+}

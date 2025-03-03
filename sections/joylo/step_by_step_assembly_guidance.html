@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Step-by-Step Assembly Guidance &#8212; BEHAVIOR Robot Suite  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=8c1380d4" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sections/joylo/step_by_step_assembly_guidance';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Assembly Videos" href="assembly_video.html" />
+    <link rel="prev" title="JoyLo Overview" href="overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">BEHAVIOR Robot Suite  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JoyLo</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">JoyLo Overview</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Step-by-Step Assembly Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="assembly_video.html">Assembly Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_and_calibration.html">Setup and Calibration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BRS Control</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/overview.html"><code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/robot_setup.html">Robot Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/ros_connection.html">ROS Connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/launch_controller.html">Launch the Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/launch_cameras.html">Launch Cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/run_real_robots.html">Run Real Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/run_joylo.html">Run JoyLo Teleoperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/data_collection.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brs_ctrl/deploy_policies.html">Deploy Policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">WB-VIMA</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/overview.html">WB-VIMA Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/data.html">Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/train.html">Policy Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/deploy.html">Deploy Trained Policies</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/sections/joylo/step_by_step_assembly_guidance.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Step-by-Step Assembly Guidance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-all-components">Prepare All Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-dynamixel-software">Prepare the Dynamixel Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assemble-the-right-arm">Assemble the Right Arm</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joycon-holder">JoyCon Holder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shoulder-roll-joint">Shoulder Roll Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upper-arm-joint">Upper Arm Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elbow-joint">Elbow Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forearm-joint">Forearm Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrist-joint">Wrist Joint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assemble-the-left-arm">Assemble the Left Arm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assemble-the-u2d2-mount">Assemble the U2D2 Mount</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-everything-on-the-t-slot-extrusion">Put Everything on the T-Slot Extrusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="step-by-step-assembly-guidance">
+<span id="joylo-assembly-guidance"></span><h1>Step-by-Step Assembly Guidance<a class="headerlink" href="#step-by-step-assembly-guidance" title="Permalink to this heading">#</a></h1>
+<p>We provide step-by-step assembly guidance for JoyLo.
+Assembly videos can be found in <a class="reference internal" href="assembly_video.html#joylo-assembly-video"><span class="std std-ref">Assembly Videos</span></a>.</p>
+<section id="prepare-all-components">
+<h2>Prepare All Components<a class="headerlink" href="#prepare-all-components" title="Permalink to this heading">#</a></h2>
+<p>First, prepare all components listed in the BoM.
+Download the OBJ files for 3D printing the JoyLo arm links:</p>
+<ol class="arabic simple">
+<li><p><input type="checkbox"> Shoulder mount <code class="docutils literal notranslate"><span class="pre">mount.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> Shoulder rear mount <code class="docutils literal notranslate"><span class="pre">mountback.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> Shoulder roll link <code class="docutils literal notranslate"><span class="pre">l2.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> Shoulder coupling rod <code class="docutils literal notranslate"><span class="pre">l2back.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> Upper arm <code class="docutils literal notranslate"><span class="pre">l3.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> Elbow <code class="docutils literal notranslate"><span class="pre">l4.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> Forearm <code class="docutils literal notranslate"><span class="pre">l5.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> JoyCon enclosure <code class="docutils literal notranslate"><span class="pre">jcA.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> JoyCon finger holder <code class="docutils literal notranslate"><span class="pre">jcB.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> JoyCon main link <code class="docutils literal notranslate"><span class="pre">jcC.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> JoyCon spacing bar <code class="docutils literal notranslate"><span class="pre">jcSpace_33mm.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+<li><p><input type="checkbox"> U2D2 mount <code class="docutils literal notranslate"><span class="pre">u2d2_mount.obj</span></code> (<a class="reference external" href="#">link</a>)</p></li>
+</ol>
+<p>Note that all arm links are designed for the right arm. Simply mirror the links to create the left arm.</p>
+</section>
+<section id="prepare-the-dynamixel-software">
+<h2>Prepare the Dynamixel Software<a class="headerlink" href="#prepare-the-dynamixel-software" title="Permalink to this heading">#</a></h2>
+<p>We assign unique motor IDs and tune default shaft positions during the assembly.
+To do this, install Dynamixel Wizard and ensure it can detect motors by following the instructions <a class="reference external" href="https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/">here</a>.</p>
+</section>
+<section id="assemble-the-right-arm">
+<h2>Assemble the Right Arm<a class="headerlink" href="#assemble-the-right-arm" title="Permalink to this heading">#</a></h2>
+<section id="joycon-holder">
+<h3>JoyCon Holder<a class="headerlink" href="#joycon-holder" title="Permalink to this heading">#</a></h3>
+<p>Take the JoyCon main link <code class="docutils literal notranslate"><span class="pre">jcC.obj</span></code> and spacing bar <code class="docutils literal notranslate"><span class="pre">jcSpace_33mm.obj</span></code>, as shown below.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_1.jpeg"><img alt="../../_images/joycon_holder_1.jpeg" src="../../_images/joycon_holder_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Insert the spacing bar into the slot of the main link.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_2.jpeg"><img alt="../../_images/joycon_holder_2.jpeg" src="../../_images/joycon_holder_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_3.jpeg"><img alt="../../_images/joycon_holder_3.jpeg" src="../../_images/joycon_holder_3.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the JoyCon enclosure <code class="docutils literal notranslate"><span class="pre">jcA.obj</span></code>, two M2 screws, and two nuts.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_4.jpeg"><img alt="../../_images/joycon_holder_4.jpeg" src="../../_images/joycon_holder_4.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Insert the nuts into the enclosure. Tighten the screws to secure the enclosure to the main link.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_5.jpeg"><img alt="../../_images/joycon_holder_5.jpeg" src="../../_images/joycon_holder_5.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_6.jpeg"><img alt="../../_images/joycon_holder_6.jpeg" src="../../_images/joycon_holder_6.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_7.jpeg"><img alt="../../_images/joycon_holder_7.jpeg" src="../../_images/joycon_holder_7.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the JoyCon finger holder <code class="docutils literal notranslate"><span class="pre">jcB.obj</span></code>.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_8.jpeg"><img alt="../../_images/joycon_holder_8.jpeg" src="../../_images/joycon_holder_8.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Insert the finger holder into the main link, and make sure the right JoyCon can be slid in.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_9.jpeg"><img alt="../../_images/joycon_holder_9.jpeg" src="../../_images/joycon_holder_9.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/joycon_holder_10.jpeg"><img alt="../../_images/joycon_holder_10.jpeg" src="../../_images/joycon_holder_10.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+<section id="shoulder-roll-joint">
+<h3>Shoulder Roll Joint<a class="headerlink" href="#shoulder-roll-joint" title="Permalink to this heading">#</a></h3>
+<p>Take the shoulder rear mount <code class="docutils literal notranslate"><span class="pre">mountback.obj</span></code> and a Dynamixel motor.
+First assign an ID <code class="docutils literal notranslate"><span class="pre">8</span></code> to the motor (we use IDs <code class="docutils literal notranslate"><span class="pre">0-7</span></code> for the left arm and IDs <code class="docutils literal notranslate"><span class="pre">8-15</span></code> for the right arm, although these can be changed).
+Insert the motor into the mount.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_1.jpeg"><img alt="../../_images/shoulder_roll_1.jpeg" src="../../_images/shoulder_roll_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_2.jpeg"><img alt="../../_images/shoulder_roll_2.jpeg" src="../../_images/shoulder_roll_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the shoulder mount <code class="docutils literal notranslate"><span class="pre">mount.obj</span></code> and a Dynamixel motor.
+Assign an ID <code class="docutils literal notranslate"><span class="pre">9</span></code> to the motor. Insert the motor into the mount.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_3.jpeg"><img alt="../../_images/shoulder_roll_3.jpeg" src="../../_images/shoulder_roll_3.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_4.jpeg"><img alt="../../_images/shoulder_roll_4.jpeg" src="../../_images/shoulder_roll_4.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the shoulder coupling rod <code class="docutils literal notranslate"><span class="pre">l2back.obj</span></code> and the assembled shoulder rear mount.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_5.jpeg"><img alt="../../_images/shoulder_roll_5.jpeg" src="../../_images/shoulder_roll_5.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Screw the rod to the motor. Make sure to adjust the motor to the provided shaft position.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_6.jpeg"><img alt="../../_images/shoulder_roll_6.jpeg" src="../../_images/shoulder_roll_6.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_7.jpeg"><img alt="../../_images/shoulder_roll_7.jpeg" src="../../_images/shoulder_roll_7.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_8.jpeg"><img alt="../../_images/shoulder_roll_8.jpeg" src="../../_images/shoulder_roll_8.jpeg" style="width: 480px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the shaft position is at 270 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_9.png"><img alt="../../_images/shoulder_roll_9.png" src="../../_images/shoulder_roll_9.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_10.jpeg"><img alt="../../_images/shoulder_roll_10.jpeg" src="../../_images/shoulder_roll_10.jpeg" style="width: 480px;" /></a>
+</figure>
+</div>
+<p>Connect the assembled shoulder rear motor and the shoulder motor with cables.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_11.jpeg"><img alt="../../_images/shoulder_roll_11.jpeg" src="../../_images/shoulder_roll_11.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Put the shoulder mount and rear mount back to back. And take the shoulder roll link <code class="docutils literal notranslate"><span class="pre">l2.obj</span></code>.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_12.jpeg"><img alt="../../_images/shoulder_roll_12.jpeg" src="../../_images/shoulder_roll_12.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Insert the roll link to the rod and motor shaft. Make sure to adjust the motor to the provided shaft position.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_13.jpeg"><img alt="../../_images/shoulder_roll_13.jpeg" src="../../_images/shoulder_roll_13.jpeg" style="width: 480px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the shaft position is at 270 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_14.png"><img alt="../../_images/shoulder_roll_14.png" src="../../_images/shoulder_roll_14.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_10.jpeg"><img alt="../../_images/shoulder_roll_10.jpeg" src="../../_images/shoulder_roll_10.jpeg" style="width: 480px;" /></a>
+</figure>
+</div>
+<p>Tighten the screws to secure the link.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/shoulder_roll_15.jpeg"><img alt="../../_images/shoulder_roll_15.jpeg" src="../../_images/shoulder_roll_15.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+<section id="upper-arm-joint">
+<h3>Upper Arm Joint<a class="headerlink" href="#upper-arm-joint" title="Permalink to this heading">#</a></h3>
+<p>Now assemble the upper arm joint. Take two Dynamixel motors, assign IDs <code class="docutils literal notranslate"><span class="pre">10</span></code> and <code class="docutils literal notranslate"><span class="pre">11</span></code> to them, and connect them with cables.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_1.jpeg"><img alt="../../_images/upper_arm_1.jpeg" src="../../_images/upper_arm_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Put the two motors back to back, and insert them into the slot of the shoulder roll link.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_2.jpeg"><img alt="../../_images/upper_arm_2.jpeg" src="../../_images/upper_arm_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the upper arm <code class="docutils literal notranslate"><span class="pre">l3.obj</span></code>. Align the two slots as shown below.
+Make sure to adjust motors to the provided shaft positions.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_3.jpeg"><img alt="../../_images/upper_arm_3.jpeg" src="../../_images/upper_arm_3.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_4.jpeg"><img alt="../../_images/upper_arm_4.jpeg" src="../../_images/upper_arm_4.jpeg" style="width: 480px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the shaft positions are at 90 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_5.png"><img alt="../../_images/upper_arm_5.png" src="../../_images/upper_arm_5.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_6.png"><img alt="../../_images/upper_arm_6.png" src="../../_images/upper_arm_6.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_7.jpeg"><img alt="../../_images/upper_arm_7.jpeg" src="../../_images/upper_arm_7.jpeg" style="width: 480px;" /></a>
+</figure>
+</div>
+<p>Tighten the screws to secure the upper arm. Make sure the cable is routed properly.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_8.jpeg"><img alt="../../_images/upper_arm_8.jpeg" src="../../_images/upper_arm_8.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/upper_arm_9.jpeg"><img alt="../../_images/upper_arm_9.jpeg" src="../../_images/upper_arm_9.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+<section id="elbow-joint">
+<h3>Elbow Joint<a class="headerlink" href="#elbow-joint" title="Permalink to this heading">#</a></h3>
+<p>First assemble a Dynamixel motor with an idler. Assign an ID <code class="docutils literal notranslate"><span class="pre">12</span></code> to the motor.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_1.jpeg"><img alt="../../_images/elbow_1.jpeg" src="../../_images/elbow_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_2.jpeg"><img alt="../../_images/elbow_2.jpeg" src="../../_images/elbow_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_3.jpeg"><img alt="../../_images/elbow_3.jpeg" src="../../_images/elbow_3.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Insert the motor to the assembled upper arm, tighten the screws, and connect the motor with cables.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_4.jpeg"><img alt="../../_images/elbow_4.jpeg" src="../../_images/elbow_4.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the elbow <code class="docutils literal notranslate"><span class="pre">l4.obj</span></code> and insert a new Dynamixel motor into it. Tighten the screws and connect the motor with cables.
+Assign an ID <code class="docutils literal notranslate"><span class="pre">13</span></code> to the motor.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_5.jpeg"><img alt="../../_images/elbow_5.jpeg" src="../../_images/elbow_5.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_6.jpeg"><img alt="../../_images/elbow_6.jpeg" src="../../_images/elbow_6.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Align the elbow with the upper arm, make sure slots are aligned and the elbow facing outwards as shown below.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_7.jpeg"><img alt="../../_images/elbow_7.jpeg" src="../../_images/elbow_7.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Adjust the elbow motor to the provided shaft position.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the shaft position is at 180 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_8.png"><img alt="../../_images/elbow_8.png" src="../../_images/elbow_8.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_9.jpeg"><img alt="../../_images/elbow_9.jpeg" src="../../_images/elbow_9.jpeg" style="width: 480px;" /></a>
+</figure>
+</div>
+<p>Tighten the screws to secure the elbow and connect the motor with cables.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/elbow_10.jpeg"><img alt="../../_images/elbow_10.jpeg" src="../../_images/elbow_10.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+<section id="forearm-joint">
+<h3>Forearm Joint<a class="headerlink" href="#forearm-joint" title="Permalink to this heading">#</a></h3>
+<p>Take the forearm <code class="docutils literal notranslate"><span class="pre">l5.obj</span></code>.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/forearm_1.jpeg"><img alt="../../_images/forearm_1.jpeg" src="../../_images/forearm_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Align the forearm with the assembled elbow, make sure slots are aligned and the stop block facing outwards as shown below.
+Ensure the forearm motor is adjusted to the provided shaft position.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/forearm_2.jpeg"><img alt="../../_images/forearm_2.jpeg" src="../../_images/forearm_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the shaft position is at 180 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/forearm_3.png"><img alt="../../_images/forearm_3.png" src="../../_images/forearm_3.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/forearm_4.jpeg"><img alt="../../_images/forearm_4.jpeg" src="../../_images/forearm_4.jpeg" style="width: 480px;" /></a>
+</figure>
+</div>
+</section>
+<section id="wrist-joint">
+<h3>Wrist Joint<a class="headerlink" href="#wrist-joint" title="Permalink to this heading">#</a></h3>
+<p>Take a Dynamixel motor, assemble an idler, and assign an ID <code class="docutils literal notranslate"><span class="pre">14</span></code> to the motor.</p>
+<p>Then take a hinge frame and two M2 screws. Drive the screws to the hinge frame as shown below.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_1.jpeg"><img alt="../../_images/wrist_1.jpeg" src="../../_images/wrist_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_2.jpeg"><img alt="../../_images/wrist_2.jpeg" src="../../_images/wrist_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take a Dynamixel motor, assign an ID <code class="docutils literal notranslate"><span class="pre">15</span></code> to it, plug one cable, and tighten it to the hinge frame.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_3.jpeg"><img alt="../../_images/wrist_3.jpeg" src="../../_images/wrist_3.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_4.jpeg"><img alt="../../_images/wrist_4.jpeg" src="../../_images/wrist_4.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_5.jpeg"><img alt="../../_images/wrist_5.jpeg" src="../../_images/wrist_5.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_6.jpeg"><img alt="../../_images/wrist_6.jpeg" src="../../_images/wrist_6.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_7.jpeg"><img alt="../../_images/wrist_7.jpeg" src="../../_images/wrist_7.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the Dynamixel motor that is previously assembled with the idler, using short screws provided in the hinge frame kit to secure the motor to the hinge frame.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_8.jpeg"><img alt="../../_images/wrist_8.jpeg" src="../../_images/wrist_8.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_9.jpeg"><img alt="../../_images/wrist_9.jpeg" src="../../_images/wrist_9.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_10.jpeg"><img alt="../../_images/wrist_10.jpeg" src="../../_images/wrist_10.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_11.jpeg"><img alt="../../_images/wrist_11.jpeg" src="../../_images/wrist_11.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Take the previously assembled forearm and insert the wrist motor to the forearm. Tighten the screws and connect the motor with cables.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_12.jpeg"><img alt="../../_images/wrist_12.jpeg" src="../../_images/wrist_12.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_13.jpeg"><img alt="../../_images/wrist_13.jpeg" src="../../_images/wrist_13.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_14.jpeg"><img alt="../../_images/wrist_14.jpeg" src="../../_images/wrist_14.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_15.jpeg"><img alt="../../_images/wrist_15.jpeg" src="../../_images/wrist_15.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Make sure the forearm motor is adjusted to the provided shaft position.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the shaft position is at 180 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_16.png"><img alt="../../_images/wrist_16.png" src="../../_images/wrist_16.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_17.jpeg"><img alt="../../_images/wrist_17.jpeg" src="../../_images/wrist_17.jpeg" style="width: 480px;" /></a>
+</figure>
+</div>
+<p>Take the assembled JoyCon holder and tighten it to the wrist motor.
+Make sure the wrist motor is adjusted to the provided shaft position.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_18.jpeg"><img alt="../../_images/wrist_18.jpeg" src="../../_images/wrist_18.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_19.jpeg"><img alt="../../_images/wrist_19.jpeg" src="../../_images/wrist_19.jpeg" style="width: 480px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the shaft position is at 180 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_20.png"><img alt="../../_images/wrist_20.png" src="../../_images/wrist_20.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/wrist_21.jpeg"><img alt="../../_images/wrist_21.jpeg" src="../../_images/wrist_21.jpeg" style="width: 480px;" /></a>
+</figure>
+</div>
+<p>Now you have an assembled right arm!</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/assembled_right_arm.jpeg"><img alt="../../_images/assembled_right_arm.jpeg" src="../../_images/assembled_right_arm.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+</section>
+<section id="assemble-the-left-arm">
+<h2>Assemble the Left Arm<a class="headerlink" href="#assemble-the-left-arm" title="Permalink to this heading">#</a></h2>
+<p>The left arm can be assembled in a similar way.
+Notice the shaft positions of the shoulder roll motors are mirrored.
+Please ensure the shaft positions are at 90 degrees when the arm is at the following configuration.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/left_arm_1.jpeg"><img alt="../../_images/left_arm_1.jpeg" src="../../_images/left_arm_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/left_arm_2.jpeg"><img alt="../../_images/left_arm_2.jpeg" src="../../_images/left_arm_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/left_arm_3.png"><img alt="../../_images/left_arm_3.png" src="../../_images/left_arm_3.png" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/left_arm_4.png"><img alt="../../_images/left_arm_4.png" src="../../_images/left_arm_4.png" style="width: 480px;" /></a>
+</figure>
+</section>
+<section id="assemble-the-u2d2-mount">
+<h2>Assemble the U2D2 Mount<a class="headerlink" href="#assemble-the-u2d2-mount" title="Permalink to this heading">#</a></h2>
+<p>Take the U2D2, power hub board, and the U2D2 mount <code class="docutils literal notranslate"><span class="pre">u2d2_mount.obj</span></code>.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/u2d2_1.jpeg"><img alt="../../_images/u2d2_1.jpeg" src="../../_images/u2d2_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Put the four hex screws into the slots.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/u2d2_2.jpeg"><img alt="../../_images/u2d2_2.jpeg" src="../../_images/u2d2_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Insert the power hub board into the mount.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/u2d2_3.jpeg"><img alt="../../_images/u2d2_3.jpeg" src="../../_images/u2d2_3.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Finally tighten the screws to secure the U2D2 and power hub board.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/u2d2_4.jpeg"><img alt="../../_images/u2d2_4.jpeg" src="../../_images/u2d2_4.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+<section id="put-everything-on-the-t-slot-extrusion">
+<h2>Put Everything on the T-Slot Extrusion<a class="headerlink" href="#put-everything-on-the-t-slot-extrusion" title="Permalink to this heading">#</a></h2>
+<p>Using screws and nuts to fix assembled components to the T-slot extrusion, as shown below.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/together_1.jpeg"><img alt="../../_images/together_1.jpeg" src="../../_images/together_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/together_2.jpeg"><img alt="../../_images/together_2.jpeg" src="../../_images/together_2.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/together_3.jpeg"><img alt="../../_images/together_3.jpeg" src="../../_images/together_3.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/together_4.jpeg"><img alt="../../_images/together_4.jpeg" src="../../_images/together_4.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/together_5.jpeg"><img alt="../../_images/together_5.jpeg" src="../../_images/together_5.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">JoyLo Overview</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="assembly_video.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assembly Videos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-all-components">Prepare All Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-dynamixel-software">Prepare the Dynamixel Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assemble-the-right-arm">Assemble the Right Arm</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joycon-holder">JoyCon Holder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shoulder-roll-joint">Shoulder Roll Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upper-arm-joint">Upper Arm Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elbow-joint">Elbow Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forearm-joint">Forearm Joint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wrist-joint">Wrist Joint</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assemble-the-left-arm">Assemble the Left Arm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assemble-the-u2d2-mount">Assemble the U2D2 Mount</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#put-everything-on-the-t-slot-extrusion">Put Everything on the T-Slot Extrusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yunfan Jiang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Yunfan Jiang.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Robot Setup &#8212; BEHAVIOR Robot Suite  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=8c1380d4" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=2b91c5f0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sections/brs_ctrl/robot_setup';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ROS Connection" href="ros_connection.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">BEHAVIOR Robot Suite  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JoyLo</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../joylo/overview.html">JoyLo Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/step_by_step_assembly_guidance.html">Step-by-Step Assembly Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/assembly_video.html">Assembly Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../joylo/setup_and_calibration.html">Setup and Calibration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BRS Control</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html"><code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Robot Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_connection.html">ROS Connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_controller.html">Launch the Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launch_cameras.html">Launch Cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_real_robots.html">Run Real Robots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_joylo.html">Run JoyLo Teleoperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_collection.html">Data Collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy_policies.html">Deploy Policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">WB-VIMA</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/overview.html">WB-VIMA Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/data.html">Data Preparation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/train.html">Policy Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wbvima/deploy.html">Deploy Trained Policies</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/sections/brs_ctrl/robot_setup.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Robot Setup</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-installation">Hardware Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robot-connection">Robot Connection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wireless-connection">Wireless Connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wired-connection">Wired Connection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-installation">Software Installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-brs-ctrl-on-robot-computer">Install <code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> on Robot Computer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-zed-ros-wrapper">Build ZED ROS Wrapper</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-realsense-sdk-for-t265">Build RealSense SDK for T265</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="robot-setup">
+<span id="brs-ctrl-robot-setup"></span><h1>Robot Setup<a class="headerlink" href="#robot-setup" title="Permalink to this heading">#</a></h1>
+<p>We provide details about setting up the Galaxea R1 robot, including the installation of cameras and necessary software packages.</p>
+<section id="hardware-installation">
+<h2>Hardware Installation<a class="headerlink" href="#hardware-installation" title="Permalink to this heading">#</a></h2>
+<p>We install our robot with the following items:</p>
+<ul class="simple">
+<li><p>2x ZED Mini cameras (wrist cameras);</p></li>
+<li><p>1x Intel RealSense T265 tracking camera (visual odometry);</p></li>
+<li><p>1x SABRENT USB 3.0 hub.</p></li>
+</ul>
+<p>We also designed 3D-printable mounts for the cameras:</p>
+<ul class="simple">
+<li><p>ZED Mini mount (<a class="reference external" href="#">link</a>);</p></li>
+<li><p>Intel RealSense T265 mount (<a class="reference external" href="#">link</a>).</p></li>
+</ul>
+<p>First connect the USB hub to the robot’s onboard computer. This step requires the robot’s body shells to be removed.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_1.jpeg"><img alt="../../_images/robot_setup_1.jpeg" src="../../_images/robot_setup_1.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_2.jpg"><img alt="../../_images/robot_setup_2.jpg" src="../../_images/robot_setup_2.jpg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_3.jpg"><img alt="../../_images/robot_setup_3.jpg" src="../../_images/robot_setup_3.jpg" style="width: 480px;" /></a>
+</figure>
+<p>Then attach the USB hub to the robot’s back.
+The USB hub is later used for camera connections and the push buttons are convenient for connecting/disconnecting the cameras.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_4.jpeg"><img alt="../../_images/robot_setup_4.jpeg" src="../../_images/robot_setup_4.jpeg" style="width: 480px;" /></a>
+</figure>
+<p>Install cameras on the robot using provided mounts.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_5.jpeg"><img alt="../../_images/robot_setup_5.jpeg" src="../../_images/robot_setup_5.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_6.jpeg"><img alt="../../_images/robot_setup_6.jpeg" src="../../_images/robot_setup_6.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_7.jpeg"><img alt="../../_images/robot_setup_7.jpeg" src="../../_images/robot_setup_7.jpeg" style="width: 480px;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/robot_setup_8.jpeg"><img alt="../../_images/robot_setup_8.jpeg" src="../../_images/robot_setup_8.jpeg" style="width: 480px;" /></a>
+</figure>
+</section>
+<section id="robot-connection">
+<h2>Robot Connection<a class="headerlink" href="#robot-connection" title="Permalink to this heading">#</a></h2>
+<section id="wireless-connection">
+<h3>Wireless Connection<a class="headerlink" href="#wireless-connection" title="Permalink to this heading">#</a></h3>
+<p>To connect the robot wireless, make sure both the robot and the workstation are connected to the same WiFi.
+We then need to find the robot’s IP address by running <code class="docutils literal notranslate"><span class="pre">ifconfig</span> <span class="pre">mlan0</span></code> on the robot computer.
+For example, the IP address for our robot is <code class="docutils literal notranslate"><span class="pre">10.5.6.145</span></code> and the user name is <code class="docutils literal notranslate"><span class="pre">nvidia</span></code>.
+We can ssh into the robot onboard computer by running <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">nvidia&#64;10.5.6.145</span></code>.</p>
+</section>
+<section id="wired-connection">
+<h3>Wired Connection<a class="headerlink" href="#wired-connection" title="Permalink to this heading">#</a></h3>
+<p>First, use an Ethernet cable to physically connect the robot and the workstation.
+Next, find the connected Ethernet interface on the workstation by running <code class="docutils literal notranslate"><span class="pre">ifconfig</span></code>. The output looks like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker0:<span class="w"> </span>...
+enp37s0f0:<span class="w"> </span>...
+enp37s0f1:<span class="w"> </span>...
+lo:<span class="w"> </span>...
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">en*</span></code> are the Ethernet interfaces. Identify the physically connected one (e.g., <code class="docutils literal notranslate"><span class="pre">enp37s0f1</span></code>). Then run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">ip</span> <span class="pre">ad</span> <span class="pre">add</span> <span class="pre">10.0.0.10/24</span> <span class="pre">dev</span> <span class="pre">enp37s0f1</span></code> on the workstation. This assigns a static IP address to the workstation. To check this is successful, run <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">a</span> <span class="pre">l</span></code>, you should see something like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">3</span>:<span class="w"> </span>enp37s0f1:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>qdisc<span class="w"> </span>mq<span class="w"> </span>state<span class="w"> </span>UP<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">1000</span>
+<span class="w">    </span>inet<span class="w"> </span><span class="m">10</span>.0.0.10/24<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>enp37s0f1
+<span class="w">       </span>valid_lft<span class="w"> </span>forever<span class="w"> </span>preferred_lft<span class="w"> </span>forever
+</pre></div>
+</div>
+<p>Now move to the robot onboard computer and open a terminal, first run <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">a</span> <span class="pre">l</span></code> to find the Ethernet interface. You will see:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>...
+<span class="m">6</span>:<span class="w"> </span>eth1:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>qdisc<span class="w"> </span>mq<span class="w"> </span>state<span class="w"> </span>UP<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">1000</span>
+<span class="w">    </span>altname<span class="w"> </span>enP5p1s0f1
+...
+</pre></div>
+</div>
+<p>Note that the physically connected interface is <code class="docutils literal notranslate"><span class="pre">eth1</span></code>. Take a note of its full name (e.g., <code class="docutils literal notranslate"><span class="pre">enP5p1s0f1</span></code>). Then run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">ip</span> <span class="pre">ad</span> <span class="pre">add</span> <span class="pre">10.0.0.20/24</span> <span class="pre">dev</span> <span class="pre">enP5p1s0f1</span></code>. This assigns the same static IP address to the robot (effectively with mask <code class="docutils literal notranslate"><span class="pre">255.255.255.0</span></code>). To verity this is successful, run <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">a</span> <span class="pre">l</span></code> again and you should see:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">6</span>:<span class="w"> </span>eth1:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>qdisc<span class="w"> </span>mq<span class="w"> </span>state<span class="w"> </span>UP<span class="w"> </span>group<span class="w"> </span>default<span class="w"> </span>qlen<span class="w"> </span><span class="m">1000</span>
+<span class="w">    </span>altname<span class="w"> </span>enP5p1s0f1
+<span class="w">    </span>inet<span class="w"> </span><span class="m">10</span>.0.0.20/24<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>eth1
+<span class="w">       </span>valid_lft<span class="w"> </span>forever<span class="w"> </span>preferred_lft<span class="w"> </span>forever
+</pre></div>
+</div>
+<p>To test, from the workstation, run <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">10.0.0.20</span></code>. You should see:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PING<span class="w"> </span><span class="m">10</span>.0.0.20<span class="w"> </span><span class="o">(</span><span class="m">10</span>.0.0.20<span class="o">)</span><span class="w"> </span><span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span><span class="w"> </span>bytes<span class="w"> </span>of<span class="w"> </span>data.
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.0.0.20:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.273<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.0.0.20:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.196<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.0.0.20:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.199<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.0.0.20:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.249<span class="w"> </span>ms
+...
+</pre></div>
+</div>
+<p>Conversely, you can test from the robot onboard computer by running <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">10.0.0.10</span></code>.</p>
+</section>
+</section>
+<section id="software-installation">
+<h2>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this heading">#</a></h2>
+<section id="install-brs-ctrl-on-robot-computer">
+<h3>Install <code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> on Robot Computer<a class="headerlink" href="#install-brs-ctrl-on-robot-computer" title="Permalink to this heading">#</a></h3>
+<p>First we need to install <code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> on the robot onboard computer.
+Follow the instructions in <a class="reference internal" href="installation.html#brs-ctrl-installation-create-environment"><span class="std std-ref">Create Environment</span></a> and <a class="reference internal" href="installation.html#brs-ctrl-installation-install-brs-ctrl"><span class="std std-ref">Install brs_ctrl</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">rospy.init_node</span></code> is hanging on the robot computer, replace <code class="docutils literal notranslate"><span class="pre">/opt/ros/noetic/lib/python3/dist-packages/rosgraph/roslogging.py</span></code> with this <a class="reference external" href="https://raw.githubusercontent.com/ros/ros_comm/685a96ec9cd67f1fd6f8cd52cce6f251f8899e67/tools/rosgraph/src/rosgraph/roslogging.py">file</a>.</p>
+</div>
+</section>
+<section id="build-zed-ros-wrapper">
+<h3>Build ZED ROS Wrapper<a class="headerlink" href="#build-zed-ros-wrapper" title="Permalink to this heading">#</a></h3>
+<p>Follow the instructions <a class="reference external" href="https://www.stereolabs.com/docs/ros">here</a> to build the ZED ROS wrapper from source on the robot onboard computer.</p>
+<p>After building the ROS package, to use our camera config, copy launch files <code class="docutils literal notranslate"><span class="pre">multicam_single_nodelet.launch</span></code> <a class="github reference external" href="https://github.com/behavior-robot-suite/brs-ctrl-dev/ros_pkgs_launch_files/zed_wrapper/launch/multicam_single_nodelet.launch">behavior-robot-suite/brs-ctrl-dev</a> to <code class="docutils literal notranslate"><span class="pre">PATH_TO_ROS_WORKSPACE/src/zed-ros-wrapper/zed-wrapper/launch/</span></code>, and <code class="docutils literal notranslate"><span class="pre">nodelet_mod.launch</span></code> <a class="github reference external" href="https://github.com/behavior-robot-suite/brs-ctrl-dev/ros_pkgs_launch_files/zed_wrapper/launch/include/nodelet_mod.launch">behavior-robot-suite/brs-ctrl-dev</a> to <code class="docutils literal notranslate"><span class="pre">PATH_TO_ROS_WORKSPACE/src/zed-ros-wrapper/zed-wrapper/launch/include/</span></code>.</p>
+<p>Be sure to change camera serial numbers in <code class="docutils literal notranslate"><span class="pre">multicam_single_nodelet.launch</span></code> to match your cameras.
+<code class="docutils literal notranslate"><span class="pre">camera_sn_1</span></code> corresponds to the head camera.
+<code class="docutils literal notranslate"><span class="pre">camera_sn_2</span></code> corresponds to the left wrist camera.
+<code class="docutils literal notranslate"><span class="pre">camera_sn_3</span></code> corresponds to the right wrist camera.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 77</span><span class="w">     </span>...
+<span class="linenos"> 78</span><span class="w">     </span><span class="cm">&lt;!-- Base frame --&gt;</span>
+<span class="linenos"> 79</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;base_frame_1&quot;</span><span class="w">            </span><span class="na">default=</span><span class="s">&quot;base_link&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 80</span>
+<span class="hll"><span class="linenos"> 81</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;camera_sn_1&quot;</span><span class="w">             </span><span class="na">default=</span><span class="s">&quot;20209960&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span class="linenos"> 82</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;gpu_id_1&quot;</span><span class="w">                </span><span class="na">default=</span><span class="s">&quot;-1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 83</span>
+<span class="linenos"> 84</span><span class="w">     </span><span class="cm">&lt;!-- LEFT WRIST CAMERA --&gt;</span>
+<span class="linenos"> 85</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;camera_name_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;zed2_left_wrist&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 86</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;camera_model_2&quot;</span><span class="w">          </span><span class="na">default=</span><span class="s">&quot;zedm&quot;</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- &#39;zed&#39; or &#39;zedm&#39; or &#39;zed2&#39; --&gt;</span>
+<span class="linenos"> 87</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;zed_nodelet_name_2&quot;</span><span class="w">      </span><span class="na">default=</span><span class="s">&quot;zed_nodelet_left_wrist&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 88</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;point_cloud_freq_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 89</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pub_frame_rate_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 90</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;grab_resolution_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;VGA&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 91</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;grab_frame_rate_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 92</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;depth_mode_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;PERFORMANCE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 93</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;min_depth_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;0.1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 94</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max_depth_2&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 95</span>
+<span class="linenos"> 96</span><span class="w">     </span><span class="cm">&lt;!-- Base frame --&gt;</span>
+<span class="linenos"> 97</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;base_frame_2&quot;</span><span class="w">            </span><span class="na">default=</span><span class="s">&quot;base_link&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos"> 98</span>
+<span class="hll"><span class="linenos"> 99</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;camera_sn_2&quot;</span><span class="w">             </span><span class="na">default=</span><span class="s">&quot;19966609&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span class="linenos">100</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;gpu_id_2&quot;</span><span class="w">                </span><span class="na">default=</span><span class="s">&quot;-1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">101</span>
+<span class="linenos">102</span><span class="w">     </span><span class="cm">&lt;!-- RIGHT WRIST CAMERA --&gt;</span>
+<span class="linenos">103</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;camera_name_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;zed2_right_wrist&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">104</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;camera_model_3&quot;</span><span class="w">          </span><span class="na">default=</span><span class="s">&quot;zedm&quot;</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- &#39;zed&#39; or &#39;zedm&#39; or &#39;zed2&#39; --&gt;</span>
+<span class="linenos">105</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;zed_nodelet_name_3&quot;</span><span class="w">      </span><span class="na">default=</span><span class="s">&quot;zed_nodelet_right_wrist&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">106</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;point_cloud_freq_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">107</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pub_frame_rate_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">108</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;grab_resolution_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;VGA&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">109</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;grab_frame_rate_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">110</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;depth_mode_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;PERFORMANCE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">111</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;min_depth_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;0.1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">112</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max_depth_3&quot;</span><span class="w">           </span><span class="na">default=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">113</span>
+<span class="linenos">114</span><span class="w">     </span><span class="cm">&lt;!-- Base frame --&gt;</span>
+<span class="linenos">115</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;base_frame_3&quot;</span><span class="w">            </span><span class="na">default=</span><span class="s">&quot;base_link&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="linenos">116</span>
+<span class="hll"><span class="linenos">117</span><span class="w">     </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;camera_sn_3&quot;</span><span class="w">             </span><span class="na">default=</span><span class="s">&quot;18204585&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span class="linenos">118</span><span class="w">     </span>...
+</pre></div>
+</div>
+</section>
+<section id="build-realsense-sdk-for-t265">
+<h3>Build RealSense SDK for T265<a class="headerlink" href="#build-realsense-sdk-for-t265" title="Permalink to this heading">#</a></h3>
+<p>Because our visual odometry the T265 camera requires an old version of RealSense SDK, we build it from source.
+First, download RealSense SDK 2.43.0 and unzip it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/IntelRealSense/librealsense/archive/refs/tags/v2.43.0.zip
+unzip<span class="w"> </span>v2.43.0.zip
+</pre></div>
+</div>
+<p>cd into the directory, create a directory called <code class="docutils literal notranslate"><span class="pre">build</span></code>, and cd into it</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>librealsense-2.43.0
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+<p>Run the CMake command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>../<span class="w"> </span>-DFORCE_RSUSB_BACKEND<span class="o">=</span>ON<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>release<span class="w"> </span>-DBUILD_WITH_CUDA:bool<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+<p>Still in the <code class="docutils literal notranslate"><span class="pre">build</span></code> directory. Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">-j4</span></code> and then <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">make</span> <span class="pre">install</span></code>. Now the SDK is installed.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="installation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ros_connection.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ROS Connection</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-installation">Hardware Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robot-connection">Robot Connection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wireless-connection">Wireless Connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wired-connection">Wired Connection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-installation">Software Installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-brs-ctrl-on-robot-computer">Install <code class="docutils literal notranslate"><span class="pre">brs_ctrl</span></code> on Robot Computer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-zed-ros-wrapper">Build ZED ROS Wrapper</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-realsense-sdk-for-t265">Build RealSense SDK for T265</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yunfan Jiang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Yunfan Jiang.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
