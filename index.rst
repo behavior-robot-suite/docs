@@ -40,3 +40,10 @@ BEHAVIOR Robot Suite documentation
     sections/brs_ctrl/run_joylo
     sections/brs_ctrl/data_collection
     sections/brs_ctrl/deploy_policies
+
+.. toctree::
+    :caption: WB-VIMA
+    :maxdepth: 1
+
+    sections/wbvima/overview
+    sections/wbvima/deploy
