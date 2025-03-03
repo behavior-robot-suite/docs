@@ -237,3 +237,110 @@ Run the following script to command JoyLo arms to a goal position. They will sta
 .. code-block:: bash
 
     python3 scripts/joylo/joylo_move.py
+
+Once you are confident that the JoyLo arms can move to the desired positions, run the bilateral teleoperation script:
+
+.. code-block:: bash
+
+    python3 scripts/joylo/real_joylo_bilateral.py
+
+Now you can control the robot with JoyLo. In the meantime, you can feel the resistance from JoyLo arms. This is because the JoyLo arms are also regularized by the robot arms' current joint positions.
+
+Let's explain the bilateral teleoperation script. First we import the necessary libraries and modules as before. But this time we import ``JoyLoArmImpedanceController`` instead of ``JoyLoArmPositionController`` to achieve impedance control of JoyLo arms.
+
+.. code-block:: python
+   :linenos:
+   :emphasize-lines: 7
+
+   import time
+   import rospy
+   import numpy as np
+   from tqdm import tqdm
+
+   from brs_ctrl.joylo import JoyLoController
+   from brs_ctrl.joylo.joylo_arms import JoyLoArmImpedanceController
+   from brs_ctrl.joylo.joycon import R1JoyConInterface
+   from brs_ctrl.robot_interface import R1Interface
+   from brs_ctrl.robot_interface.grippers import GalaxeaR1Gripper
+
+We create the robot interface and JoyCon interface as before. When we create the ``JoyLoArmImpedanceController``, we need to specify the proportional gains ``Kp`` and derivative gains ``Kd`` for the impedance control.
+
+.. code-block:: python
+   :linenos:
+   :lineno-start: 28
+   :emphasize-lines: 11,12,13,14
+
+    joylo_arms = JoyLoArmImpedanceController(
+        left_motor_ids=[0, 1, 2, 3, 4, 5, 6, 7],
+        right_motor_ids=[8, 9, 10, 11, 12, 13, 14, 15],
+        motors_port="/dev/tty_joylo",
+        left_arm_joint_signs=[-1, -1, 1, 1, 1, 1],
+        right_arm_joint_signs=[-1, -1, 1, 1, -1, 1],
+        left_slave_motor_ids=[1, 3],
+        left_master_motor_ids=[0, 2],
+        right_slave_motor_ids=[9, 11],
+        right_master_motor_ids=[8, 10],
+        left_arm_Kp=[0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+        left_arm_Kd=[0.01, 0.01, 0.01, 0.01, 0.01, 0.01],
+        right_arm_Kp=[0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+        right_arm_Kd=[0.01, 0.01, 0.01, 0.01, 0.01, 0.01],
+        left_arm_joint_reset_positions=neutral_left_arm_qs,
+        right_arm_joint_reset_positions=neutral_right_arm_qs,
+    )
+
+Notice that ``Kp`` and ``Kd`` need to be tuned case by case. We set them to ``0.5`` and ``0.01`` respectively as a starting point.
+
+Next, we start the bilateral teleoperation loop. The key difference is we not only send control commands to the robot but also set goals for JoyLo arms.
+
+.. code-block:: python
+   :linenos:
+   :lineno-start: 56
+   :emphasize-lines: 20, 21, 22, 23, 24, 25, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
+
+    while not rospy.is_shutdown():
+        two_arm_gello_q = joylo.q
+        left_robot_arm_q = robot.last_joint_position["left_arm"]
+        right_robot_arm_q = robot.last_joint_position["right_arm"]
+        left_joylo_q = (
+            two_arm_gello_q["left"]
+            if left_joylo_q is None
+            else (1 - alpha) * left_joylo_q + alpha * two_arm_gello_q["left"]
+        )
+        right_joylo_q = (
+            two_arm_gello_q["right"]
+            if right_joylo_q is None
+            else (1 - alpha) * right_joylo_q + alpha * two_arm_gello_q["right"]
+        )
+        curr_torso_qs = robot.last_joint_position["torso"]
+        joycon_action = joycon.act(curr_torso_qs)
+        robot_torso_cmd = np.zeros((4,))
+        robot_torso_cmd[:] = joycon_action["torso_cmd"][:]
+
+        joylo.set_new_arm_goal(
+            {
+                "left": left_robot_arm_q,
+                "right": right_robot_arm_q,
+            }
+        )
+        if not control_started:
+            joylo.start_arm_control()
+            control_started = True
+        robot.control(
+            arm_cmd={
+                "left": left_joylo_q,
+                "right": right_joylo_q,
+            },
+            gripper_cmd={
+                "left": joycon_action["gripper_cmd"]["left"],
+                "right": joycon_action["gripper_cmd"]["right"],
+            },
+            torso_cmd=robot_torso_cmd,
+            base_cmd=joycon_action["mobile_base_cmd"],
+        )
+        pbar.update(1)
+
+Finally, as a fun bonus, we can run the following script to see the robot unilaterally controls the JoyLo arms.
+
+.. code-block:: bash
+
+    python3 scripts/joylo/r1_to_joylo.py
