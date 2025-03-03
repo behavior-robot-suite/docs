@@ -46,4 +46,6 @@ BEHAVIOR Robot Suite documentation
     :maxdepth: 1
 
     sections/wbvima/overview
+    sections/wbvima/installation
+    sections/wbvima/data
     sections/wbvima/deploy
