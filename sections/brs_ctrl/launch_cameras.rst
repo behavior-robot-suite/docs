@@ -1,3 +1,5 @@
+.. _brs_ctrl_launch_cameras:
+
 Launch Cameras
 =======================================
 

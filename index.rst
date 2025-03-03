@@ -38,4 +38,4 @@ BEHAVIOR Robot Suite documentation
     sections/brs_ctrl/launch_cameras
     sections/brs_ctrl/run_real_robots
     sections/brs_ctrl/run_joylo
-
+    sections/brs_ctrl/data_collection

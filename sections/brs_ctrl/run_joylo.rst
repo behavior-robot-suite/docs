@@ -1,3 +1,5 @@
+.. _brs_ctrl_run_joylo:
+
 Run JoyLo Teleoperation
 =======================================
 
