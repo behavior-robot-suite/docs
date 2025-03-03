@@ -25,7 +25,7 @@ Now let's go through what the script does. First we import the necessary librari
     import numpy as np
 
     from brs_ctrl.asset_root import ASSET_ROOT
-    from brs_ctrl.joylo import JoyLoPositionController
+    from brs_ctrl.joylo import JoyLoController
     from brs_ctrl.joylo.joylo_arms import JoyLoArmPositionController
     from brs_ctrl.joylo.joycon import R1JoyConInterface
 
@@ -186,22 +186,22 @@ Next, we keep running the control in a loop.
    :lineno-start: 46
 
     alpha = 0.95
-    left_gello_q = None
-    right_gello_q = None
+    left_joylo_q = None
+    right_joylo_q = None
 
     pbar = tqdm()
     try:
         while not rospy.is_shutdown():
-            two_arm_gello_q = joylo.q
-            left_gello_q = (
-                two_arm_gello_q["left"]
-                if left_gello_q is None
-                else (1 - alpha) * left_gello_q + alpha * two_arm_gello_q["left"]
+            joylo_arms_q = joylo.q
+            left_joylo_q = (
+                joylo_arms_q["left"]
+                if left_joylo_q is None
+                else (1 - alpha) * left_joylo_q + alpha * joylo_arms_q["left"]
             )
-            right_gello_q = (
-                two_arm_gello_q["right"]
-                if right_gello_q is None
-                else (1 - alpha) * right_gello_q + alpha * two_arm_gello_q["right"]
+            right_joylo_q = (
+                joylo_arms_q["right"]
+                if right_joylo_q is None
+                else (1 - alpha) * right_joylo_q + alpha * joylo_arms_q["right"]
             )
             curr_torso_qs = robot.last_joint_position["torso"]
             joycon_action = joycon.act(curr_torso_qs)
@@ -210,8 +210,8 @@ Next, we keep running the control in a loop.
 
             robot.control(
                 arm_cmd={
-                    "left": left_gello_q,
-                    "right": right_gello_q,
+                    "left": left_joylo_q,
+                    "right": right_joylo_q,
                 },
                 gripper_cmd={
                     "left": joycon_action["gripper_cmd"]["left"],
@@ -298,18 +298,18 @@ Next, we start the bilateral teleoperation loop. The key difference is we not on
    :emphasize-lines: 20, 21, 22, 23, 24, 25, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
 
     while not rospy.is_shutdown():
-        two_arm_gello_q = joylo.q
+        joylo_arms_q = joylo.q
         left_robot_arm_q = robot.last_joint_position["left_arm"]
         right_robot_arm_q = robot.last_joint_position["right_arm"]
         left_joylo_q = (
-            two_arm_gello_q["left"]
+            joylo_arms_q["left"]
             if left_joylo_q is None
-            else (1 - alpha) * left_joylo_q + alpha * two_arm_gello_q["left"]
+            else (1 - alpha) * left_joylo_q + alpha * joylo_arms_q["left"]
         )
         right_joylo_q = (
-            two_arm_gello_q["right"]
+            joylo_arms_q["right"]
             if right_joylo_q is None
-            else (1 - alpha) * right_joylo_q + alpha * two_arm_gello_q["right"]
+            else (1 - alpha) * right_joylo_q + alpha * joylo_arms_q["right"]
         )
         curr_torso_qs = robot.last_joint_position["torso"]
         joycon_action = joycon.act(curr_torso_qs)
