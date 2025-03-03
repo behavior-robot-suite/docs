@@ -1,3 +1,5 @@
+.. _brs_ctrl_data_collection:
+
 Data Collection
 =======================================
 
