@@ -25,6 +25,6 @@ Our paper is available on arXiv. If you find our work useful, please consider ci
 
     @article{jiang2025brs,
       title = {BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities},
-      author = {Yunfan Jiang and Ruohan Zhang and Josiah Wang and Chen Wang and Yanjie Ze and Hang Yin and Cem Gokmen and Shuran Song and Jiajun Wu and Li Fei-Fei},
+      author = {Yunfan Jiang and Ruohan Zhang and Josiah Wong and Chen Wang and Yanjie Ze and Hang Yin and Cem Gokmen and Shuran Song and Jiajun Wu and Li Fei-Fei},
       year = {2025}
     }
