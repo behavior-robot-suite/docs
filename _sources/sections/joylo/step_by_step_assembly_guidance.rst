@@ -15,18 +15,18 @@ Prepare All Components
 First, prepare all components listed in the BoM.
 Download the OBJ files for 3D printing the JoyLo arm links:
 
-#. |uncheck| Shoulder mount ``mount.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/mount.obj>`_)
-#. |uncheck| Shoulder rear mount ``mountback.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/mountback.obj>`_)
-#. |uncheck| Shoulder roll link ``l2.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/l2.obj>`_)
-#. |uncheck| Shoulder coupling rod ``l2back.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/l2back.obj>`_)
-#. |uncheck| Upper arm ``l3.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/l3.obj>`_)
-#. |uncheck| Elbow ``l4.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/l4.obj>`_)
-#. |uncheck| Forearm ``l5.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/l5.obj>`_)
-#. |uncheck| JoyCon enclosure ``jcA.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/jcA.obj>`_)
-#. |uncheck| JoyCon finger holder ``jcB.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/jcB.obj>`_)
-#. |uncheck| JoyCon main link ``jcC.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/jcC.obj>`_)
-#. |uncheck| JoyCon spacing bar ``jcSpace_33mm.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/jcSpace_33mm.obj>`_)
-#. |uncheck| U2D2 mount ``u2d2_mount.obj`` (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/joylo/u2d2_mount.obj>`_)
+#. |uncheck| Shoulder mount ``mount.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/mount.obj>`_)
+#. |uncheck| Shoulder rear mount ``mountback.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/mountback.obj>`_)
+#. |uncheck| Shoulder roll link ``l2.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/l2.obj>`_)
+#. |uncheck| Shoulder coupling rod ``l2back.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/l2back.obj>`_)
+#. |uncheck| Upper arm ``l3.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/l3.obj>`_)
+#. |uncheck| Elbow ``l4.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/l4.obj>`_)
+#. |uncheck| Forearm ``l5.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/l5.obj>`_)
+#. |uncheck| JoyCon enclosure ``jcA.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/jcA.obj>`_)
+#. |uncheck| JoyCon finger holder ``jcB.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/jcB.obj>`_)
+#. |uncheck| JoyCon main link ``jcC.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/jcC.obj>`_)
+#. |uncheck| JoyCon spacing bar ``jcSpace_33mm.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/jcSpace_33mm.obj>`_)
+#. |uncheck| U2D2 mount ``u2d2_mount.obj`` (`link <https://github.com/behavior-robot-suite/brs-ctrl/blob/main/hardware/joylo/u2d2_mount.obj>`_)
 
 Note that all arm links are designed for the right arm. Simply mirror the links to create the left arm.
 
