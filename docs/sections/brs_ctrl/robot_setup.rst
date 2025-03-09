@@ -16,8 +16,8 @@ We install our robot with the following items:
 
 We also designed 3D-printable mounts for the cameras:
 
-* ZED Mini mount (`link <#>`_);
-* Intel RealSense T265 mount (`link <#>`_).
+* ZED Mini mount (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/camera_mounts/zed_mini_mount.stl>`_);
+* Intel RealSense T265 mount (`link <https://raw.githubusercontent.com/behavior-robot-suite/brs-ctrl/refs/heads/main/hardware/camera_mounts/realsense_t265_mount.stl>`_).
 
 First connect the USB hub to the robot's onboard computer. This step requires the robot's body shells to be removed.
 
