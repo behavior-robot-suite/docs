@@ -19,12 +19,13 @@ Key features include:
 
 Paper and Citation
 ---------------------------------------
-Our paper is available on arXiv. If you find our work useful, please consider citing us!
+Our paper is available on `arXiv <https://arxiv.org/abs/2503.05652>`_. If you find our work useful, please consider citing us!
 
 .. code-block:: bibtex
 
     @article{jiang2025brs,
-      title = {BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities},
-      author = {Yunfan Jiang and Ruohan Zhang and Josiah Wong and Chen Wang and Yanjie Ze and Hang Yin and Cem Gokmen and Shuran Song and Jiajun Wu and Li Fei-Fei},
-      year = {2025}
+      title   = {BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities},
+      author  = {Yunfan Jiang and Ruohan Zhang and Josiah Wong and Chen Wang and Yanjie Ze and Hang Yin and Cem Gokmen and Shuran Song and Jiajun Wu and Li Fei-Fei},
+      year    = {2025},
+      journal = {arXiv preprint arXiv: 2503.05652}
     }
