@@ -130,7 +130,7 @@ Build ZED ROS Wrapper
 
 Follow the instructions `here <https://www.stereolabs.com/docs/ros>`_ to build the ZED ROS wrapper from source on the robot onboard computer.
 
-After building the ROS package, to use our camera config, copy launch files ``multicam_single_nodelet.launch`` https://github.com/behavior-robot-suite/brs-ctrl-dev/ros_pkgs_launch_files/zed_wrapper/launch/multicam_single_nodelet.launch to ``PATH_TO_ROS_WORKSPACE/src/zed-ros-wrapper/zed-wrapper/launch/``, and ``nodelet_mod.launch`` https://github.com/behavior-robot-suite/brs-ctrl-dev/ros_pkgs_launch_files/zed_wrapper/launch/include/nodelet_mod.launch to ``PATH_TO_ROS_WORKSPACE/src/zed-ros-wrapper/zed-wrapper/launch/include/``.
+After building the ROS package, to use our camera config, copy launch files ``multicam_single_nodelet.launch`` https://github.com/behavior-robot-suite/brs-ctrl/ros_pkgs_launch_files/zed_wrapper/launch/multicam_single_nodelet.launch to ``PATH_TO_ROS_WORKSPACE/src/zed-ros-wrapper/zed-wrapper/launch/``, and ``nodelet_mod.launch`` https://github.com/behavior-robot-suite/brs-ctrl/ros_pkgs_launch_files/zed_wrapper/launch/include/nodelet_mod.launch to ``PATH_TO_ROS_WORKSPACE/src/zed-ros-wrapper/zed-wrapper/launch/include/``.
 
 Be sure to change camera serial numbers in ``multicam_single_nodelet.launch`` to match your cameras.
 ``camera_sn_1`` corresponds to the head camera.
