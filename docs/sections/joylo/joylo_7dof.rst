@@ -8,3 +8,5 @@ We provide a new JoyLo design with 7-DoF arms! Download the design files from `h
     :playsinline:
     :muted:
     :align: center
+    :width: 1280
+    :height: 720
