@@ -30,6 +30,9 @@ Download the OBJ files for 3D printing the JoyLo arm links:
 
 Note that all arm links are designed for the right arm. Simply mirror the links to create the left arm.
 
+.. note::
+    If you would like to modify our design, you can download editable F3D files `here <https://github.com/behavior-robot-suite/brs-ctrl/tree/main/hardware/joylo/f3d>`_.
+
 Prepare the Dynamixel Software
 ---------------------------------------
 We assign unique motor IDs and tune default shaft positions during the assembly.
