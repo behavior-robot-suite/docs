@@ -22,6 +22,7 @@ BEHAVIOR Robot Suite documentation
    :maxdepth: 1
 
    sections/joylo/overview
+   sections/joylo/joylo_7dof
    sections/joylo/step_by_step_assembly_guidance
    sections/joylo/assembly_video
    sections/joylo/setup_and_calibration
